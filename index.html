@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RENO - stavební firma s.r.o.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    :root {
+      --main-red: #EA4335;
+      --text-color: #333;
+      --bg-color: #eaeaea;
+      --section-alt-bg: #f9f9f9;
+      --footer-bg: #222;
+      --footer-text: #ccc;
+      --section-line: #ddd;
+      --slogan-color: #444444;
+      --subheading-color: #888;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .page {
+      background-color: #fff;
+      width: 100%;
+      max-width: 1000px;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ffffff;
+      border-bottom: 4px solid var(--main-red);
+      padding: 40px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      max-width: 180px;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      width: 100%;
+      height: auto;
+    }
+
+    .slogan {
+      flex: 1;
+      font-size: 1rem;
+      color: var(--slogan-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: right;
+    }
+
+    h2 {
+      color: var(--main-red);
+      font-size: 1.75rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .subheading {
+      font-size: 0.95rem;
+      color: var(--subheading-color);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    section {
+      border-bottom: 1px solid var(--section-line);
+      padding: 50px 20px;
+    }
+
+    section:nth-of-type(even) {
+      background-color: var(--section-alt-bg);
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact p {
+      margin: 5px 0;
+      font-size: 1.05rem;
+      text-align: center;
+    }
+
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+      margin-right: 8px;
+      color: var(--main-red);
+    }
+
+    .slider {
+      overflow: hidden;
+      margin: 0;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      position: relative;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.8s ease-in-out;
+    }
+
+    .slides img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      display: block;
+      margin: 0;
+      border-radius: 0;
+      opacity: 0.9;
+    }
+
+    .map-section {
+      text-align: center;
+      border-bottom: none;
+      padding: 60px 20px;
+    }
+
+    .map-container {
+      margin: 0 auto;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: #fff;
+      width: max-content;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .map-frame {
+      width: 600px;
+      height: 600px;
+      border: none;
+      display: block;
+    }
+
+    .map-link {
+      margin-top: 15px;
+      display: inline-block;
+      font-size: 0.95rem;
+      color: var(--main-red);
+      text-decoration: none;
+    }
+
+    .map-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: var(--footer-bg);
+      color: var(--footer-text);
+      text-align: center;
+      padding: 15px 0;
+      margin-top: auto;
+      font-size: 0.9rem;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+      .slogan {
+        text-align: center;
+      }
+      .slider {
+        display: none;
+      }
+      .map-frame {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo">
+        <img src="reno_logo_with_true_white_bg.png" alt="RENO logo">
+      </div>
+      <div class="slogan">
+        Rekonstrukce, novostavby a revitalizace objektů od roku 1996
+      </div>
+    </header>
+
+    <div class="slider">
+      <div class="slides" id="slides">
+        <img src="his.PNG" alt="Historická budova">
+        <img src="obc.PNG" alt="Občanská budova">
+        <img src="rod.PNG" alt="Rodinný dům">
+        <img src="1.JPG" alt="Rodinný dům 2">
+        <img src="2.JPG" alt="Interiér domu">
+        <img src="3.JPG" alt="Fasáda domu">
+        <img src="4.JPG" alt="Rekonstrukce interiéru">
+      </div>
+    </div>
+
+    <section class="contact">
+      <h2>Kontaktní údaje:</h2>
+      <div class="subheading">Neváhejte se na nás obrátit</div>
+      <p><strong>RENO - stavební firma s.r.o.</strong></p>
+      <p>Ke Spravedlnosti 667</p>
+      <p>Jaroměřice nad Rokytnou, 675 51</p>
+      <p>IČ: 63497786</p>
+      <p><span class="material-symbols-outlined">call</span> +420 568 440 080</p>
+      <p><span class="material-symbols-outlined">mail</span> renojaromerice@seznam.cz</p>
+    </section>
+
+    <section class="map-section">
+      <h2>Kde nás najdete?</h2>
+      <div class="subheading">Naše provozovna v Jaroměřicích nad Rokytnou</div>
+      <div class="map-container">
+        <iframe class="map-frame" src="https://mapy.com/s/cosabuhote" frameborder="0"></iframe>
+      </div>
+      <a class="map-link" href="https://mapy.cz/s/cosabuhote" target="_blank">Zobrazit na Mapy.cz</a>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 RENO - stavební firma s.r.o. Všechna práva vyhrazena.
+  </footer>
+
+  <script>
+    const slides = document.getElementById('slides');
+    let index = 0;
+    const slideWidth = 150;
+
+    setInterval(() => {
+      slides.style.transition = 'transform 0.8s ease-in-out';
+      slides.style.transform = `translateX(-${slideWidth}px)`;
+
+      setTimeout(() => {
+        slides.appendChild(slides.children[0]);
+        slides.style.transition = 'none';
+        slides.style.transform = 'translateX(0)';
+      }, 800);
+    }, 3000);
+  </script>
+</body>
+</html>
